@@ -1,0 +1,957 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "B2G API",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://b2g.herokuapp.com/api/v1"
+    }
+  ],
+  "components": {},
+  "tags": [
+    {
+      "name": "Admins",
+      "description": "API functions for Admins"
+    },
+    {
+      "name": "Owners",
+      "description": "API functions for Owners"
+    },
+    {
+      "name": "Points",
+      "description": "API functions for Points"
+    },
+    {
+      "name": "MenuItems",
+      "description": "API functions for Menu"
+    },
+    {
+      "name": "Sales",
+      "description": "API functions for Sale"
+    },
+    {
+      "name": "Feedbacks",
+      "description": "API functions for Feedbacks"
+    }
+  ],
+  "apis": [],
+  "paths": {
+    "/admin/login": {
+      "post": {
+        "tags": ["Admins"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": true,
+            "description": "admin@mail.com"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "description": "admin1234"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,role:admin,token:******}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/logout": {
+      "post": {
+        "tags": ["Admins"],
+        "parameters": [
+          {
+            "name": "Autorization",
+            "required": true,
+            "description": "Bearer ******"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/changeSettings": {
+      "post": {
+        "tags": ["Admins"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": false,
+            "description": "admin@mail.com"
+          },
+          {
+            "name": "password",
+            "required": false,
+            "description": "admin1234"
+          },
+          {
+            "name": "phone",
+            "required": false,
+            "description": "99 99 99 99"
+          },
+          {
+            "name": "lat",
+            "required": false,
+            "description": "40.235645552"
+          },
+          {
+            "name": "lng",
+            "required": false,
+            "description": "41.25458545"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/me": {
+      "get": {
+        "tags": ["Admins"],
+        "parameters": [
+          {
+            "name": "Autorization",
+            "required": true,
+            "description": "Bearer ******"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,data:{id:***,firstName:***,lastName:***,phone:***,role:***}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owners/create": {
+      "post": {
+        "tags": ["Owners"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": false,
+            "description": "admin@mail.com"
+          },
+          {
+            "name": "password",
+            "required": false,
+            "description": "admin1234"
+          },
+          {
+            "name": "phone",
+            "required": false,
+            "description": "99 99 99 99"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owners/delete": {
+      "post": {
+        "tags": ["Owners"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": false,
+            "description": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owners/activity": {
+      "post": {
+        "tags": ["Owners"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "35"
+          },
+          {
+            "name": "active",
+            "required": true,
+            "description": "true/false"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owners": {
+      "get": {
+        "tags": ["Owners"],
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "description": "3"
+          },
+          {
+            "name": "size",
+            "required": false,
+            "description": "by default 16"
+          },
+          {
+            "name": "search",
+            "required": false,
+            "description": "{phone:99999999,firstName:gagas}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,data:{...,Points:{...}}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owners/:id": {
+      "get": {
+        "tags": ["Owners"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "13"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,,data:{...,Points:{...}}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/points/create": {
+      "post": {
+        "tags": ["Points"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": true,
+            "description": "admin@mail.com"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "description": "admin1234"
+          },
+          {
+            "name": "phone",
+            "required": true,
+            "description": "99 99 99 99"
+          },
+          {
+            "name": "ownerId",
+            "required": true,
+            "description": "1"
+          },
+          {
+            "name": "addressHy",
+            "required": true,
+            "description": "Pushkini 14 hayerenov"
+          },
+          {
+            "name": "addressRu",
+            "required": true,
+            "description": "Pushkini 14 ruserenov"
+          },
+          {
+            "name": "addressEn",
+            "required": true,
+            "description": "Pushkini 14 ev iharke anglerenov"
+          },
+          {
+            "name": "lat",
+            "required": true,
+            "description": "40.3456241545"
+          },
+          {
+            "name": "lng",
+            "required": true,
+            "description": "41.2185458741241"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/points/delete": {
+      "post": {
+        "tags": ["Points"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/points/activity": {
+      "post": {
+        "tags": ["Points"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "56"
+          },
+          {
+            "name": "active",
+            "required": true,
+            "description": "true/false"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/points": {
+      "get": {
+        "tags": ["Points"],
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "description": "3"
+          },
+          {
+            "name": "size",
+            "required": false,
+            "description": "by default 16"
+          },
+          {
+            "name": "search",
+            "required": false,
+            "description": "{phone:99999999,firstName:gagas}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,data:{...,MenuItems:{...}}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/points/:id": {
+      "get": {
+        "tags": ["Points"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "13"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,,data:{...,MenuItems:{...}}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/menus/create": {
+      "post": {
+        "tags": ["MenuItems"],
+        "parameters": [
+          {
+            "name": "image",
+            "required": true,
+            "description": "http://res.cloudinary.com/armcoding19/image/upload/v1682682533/pmldcyexh8w2cfdbs40r.jpg"
+          },
+          {
+            "name": "ownerId",
+            "required": true,
+            "description": "1"
+          },
+          {
+            "name": "nameHy",
+            "required": true,
+            "description": "Lateyyy hayerenov"
+          },
+          {
+            "name": "nameRu",
+            "required": true,
+            "description": "Lateyyy ruserenov"
+          },
+          {
+            "name": "nameEn",
+            "required": true,
+            "description": "Lateyyy ev iharke, ches havata bayc de meka anglerenov"
+          },
+          {
+            "name": "descHy",
+            "required": true,
+            "description": "Prpurov Lateyyy hayerenov"
+          },
+          {
+            "name": "descRu",
+            "required": true,
+            "description": "Prpurov Lateyyy ruserenov"
+          },
+          {
+            "name": "descEn",
+            "required": true,
+            "description": "Prpurov Lateyyy ches havata bayc anglerenov"
+          },
+          {
+            "name": "price",
+            "required": true,
+            "description": "3 $ni"
+          },
+          {
+            "name": "pointId",
+            "required": true,
+            "description": "45"
+          },
+          {
+            "name": "ownerId",
+            "required": true,
+            "description": "8"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/menus/edit": {
+      "post": {
+        "tags": ["MenuItems"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "4"
+          },
+          {
+            "name": "image",
+            "required": true,
+            "description": "http://res.cloudinary.com/armcoding19/image/upload/v1682682533/pmldcyexh8w2cfdbs40r.jpg"
+          },
+          {
+            "name": "ownerId",
+            "required": true,
+            "description": "1"
+          },
+          {
+            "name": "nameHy",
+            "required": true,
+            "description": "Lateyyy hayerenov"
+          },
+          {
+            "name": "nameRu",
+            "required": true,
+            "description": "Lateyyy ruserenov"
+          },
+          {
+            "name": "nameEn",
+            "required": true,
+            "description": "Lateyyy ev iharke, ches havata bayc de meka anglerenov"
+          },
+          {
+            "name": "descHy",
+            "required": true,
+            "description": "Prpurov Lateyyy hayerenov"
+          },
+          {
+            "name": "descRu",
+            "required": true,
+            "description": "Prpurov Lateyyy ruserenov"
+          },
+          {
+            "name": "descEn",
+            "required": true,
+            "description": "Prpurov Lateyyy ches havata bayc anglerenov"
+          },
+          {
+            "name": "price",
+            "required": true,
+            "description": "3 $ni"
+          },
+          {
+            "name": "pointId",
+            "required": true,
+            "description": "45"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/menus/delete": {
+      "post": {
+        "tags": ["MenuItems"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "4"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/menus": {
+      "get": {
+        "tags": ["MenuItems"],
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "description": "3"
+          },
+          {
+            "name": "size",
+            "required": false,
+            "description": "by default 16"
+          },
+          {
+            "name": "search",
+            "required": false,
+            "description": "{phone:99999999,firstName:gagas}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,data:{...}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/menus/:id": {
+      "get": {
+        "tags": ["MenuItems"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "13"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,,data:{...}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sales/": {
+      "post": {
+        "tags": ["Sales"],
+        "parameters": [
+          {
+            "name": "discount",
+            "required": false,
+            "description": "25"
+          },
+          {
+            "name": "promocode",
+            "required": false,
+            "description": "Gago3000"
+          },
+          {
+            "name": "menuItemId",
+            "required": true,
+            "description": "46"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sales/delete": {
+      "post": {
+        "tags": ["Sales"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "25"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sales/edit": {
+      "post": {
+        "tags": ["Sales"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "25"
+          },
+          {
+            "name": "discount",
+            "required": false,
+            "description": "25"
+          },
+          {
+            "name": "promocode",
+            "required": false,
+            "description": "Gago3000"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedbacks/": {
+      "post": {
+        "tags": ["Feedbacks"],
+        "parameters": [
+          {
+            "name": "name",
+            "required": true,
+            "description": "Hamlet"
+          },
+          {
+            "name": "text",
+            "required": true,
+            "description": "shat lavna dzer lateyy"
+          },
+          {
+            "name": "menuItemId",
+            "required": true,
+            "description": "46"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedbacks/delete": {
+      "post": {
+        "tags": ["Feedbacks"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "25"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedbacks/edit-actvity": {
+      "post": {
+        "tags": ["Feedbacks"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "25"
+          },
+          {
+            "name": "activity",
+            "required": true,
+            "description": "true || false"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedbacks": {
+      "get": {
+        "tags": ["Feedbacks"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "25"
+          },
+          {
+            "name": "page",
+            "required": true,
+            "description": "3"
+          },
+          {
+            "name": "size",
+            "required": false,
+            "description": "18"
+          },
+          {
+            "name": "search",
+            "required": false,
+            "description": "{name:gagik,ownerId:5,poinId:6,menuItemId:89}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

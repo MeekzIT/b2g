@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "tuser",
+    "password": "123321",
+    "database": "b2g",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "krnbivmwxtrqhk",
+    "password": "adaf90aa0b998d1922197fb00f38184b3bce5fe71f627862ab3e06a1ddd00c00",
+    "database": "dduho1ih6ghds9",
+    "host": "ec2-52-5-167-89.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
