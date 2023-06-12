@@ -1,3 +1,5 @@
+const { Op } = require("sequelize");
+
 const FeedBack = require("../models").FeedBack;
 
 const create = async (req, res) => {
@@ -59,13 +61,13 @@ const getFeedBacksOfMenuItem = async (req, res) => {
         queryObj.name = { [Op.like]: `%${searchedItems.name}%` };
 
       if (searchedItems.ownerId)
-        queryObj.ownerId = { [Op.like]: `%${searchedItems.ownerId}%` };
+        queryObj.ownerId = { [Op.eq]: searchedItems.ownerId };
 
       if (searchedItems.poinId)
-        queryObj.poinId = { [Op.like]: `%${searchedItems.poinId}%` };
+        queryObj.poinId = { [Op.eq]: searchedItems.poinId };
 
       if (searchedItems.menuItemId)
-        queryObj.menuItemId = { [Op.like]: `%${searchedItems.menuItemId}%` };
+        queryObj.menuItemId = { [Op.eq]: searchedItems.menuItemId };
     }
     if (sort !== undefined) {
       sortedItems.push([sort.split(",")[0], sort.split(",")[1].toUpperCase()]);

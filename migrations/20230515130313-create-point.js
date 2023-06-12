@@ -30,6 +30,7 @@ module.exports = {
       phone: {
         type: Sequelize.STRING,
       },
+      image:Sequelize.STRING,
       addressHy: Sequelize.STRING,
       addressRu: Sequelize.STRING,
       addressEn: Sequelize.STRING,

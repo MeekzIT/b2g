@@ -1,5 +1,8 @@
 const { Op } = require("sequelize");
 const MenuItem = require("../models").MenuItem;
+const Sale = require("../models").Sale;
+const FeedBack = require("../models").FeedBack;
+
 
 const create = async (req, res) => {
   try {
@@ -139,6 +142,16 @@ const getAll = async (req, res) => {
       },
       offset: offset * limit,
       limit,
+      include: [
+        {
+          model: Sale,
+          as: "sales",
+        },
+        {
+          model: FeedBack,
+          as: "feedBacks",
+        },
+      ],
     });
     let totalPages = Math.ceil(count.length / limit);
     return res.json({
@@ -157,6 +170,16 @@ const getSingle = async (req, res) => {
 
     const point = await MenuItem.findOne({
       where: { id },
+      include: [
+        {
+          model: Sale,
+          as: "sales",
+        },
+        {
+          model: FeedBack,
+          as: "feedBacks",
+        },
+      ],
     });
     return res.json({
       succes: true,

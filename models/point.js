@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       lng: DataTypes.STRING,
       phone: DataTypes.STRING,
       active: DataTypes.BOOLEAN,
+      image:DataTypes.STRING
     },
     {
       sequelize,
