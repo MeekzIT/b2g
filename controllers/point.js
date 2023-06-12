@@ -67,16 +67,16 @@ const deletePoint = async (req, res) => {
 
 const pointActivity = async (req, res) => {
   try {
-    const { role, active } = req.user;
-    const { id } = req.body;
+    const { role } = req.user;
+    const { id, active } = req.body;
 
     if (role == "admin" || role == "owner") {
-      const point = await Point.findOne({
-        where: { id },
-      });
-      point.active = active;
-      await point.save();
-      return res.json({ succes: true });
+    const point = await Point.findOne({
+      where: { id },
+    });
+    point.active = active;
+    await point.save();
+    return res.json({ succes: true });
     }
     return res.json({
       succes: false,

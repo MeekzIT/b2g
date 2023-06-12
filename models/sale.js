@@ -26,8 +26,8 @@ module.exports = (sequelize, DataTypes) => {
 
   let MenuItem = sequelize.define("MenuItem");
 
-  Sale.hasMany(MenuItem, {
-    foreignKey: "menuItemId",
+  Sale.belongsTo(MenuItem, {
+    foreignKey: "id",
     as: "sales",
   });
 

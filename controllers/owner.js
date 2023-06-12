@@ -49,8 +49,8 @@ const deleteOwner = async (req, res) => {
 
 const ownerActivity = async (req, res) => {
   try {
-    const { role, active } = req.user;
-    const { id } = req.body;
+    const { role } = req.user;
+    const { id, active } = req.body;
 
     if (role == "admin") {
       const owner = await Owner.findOne({
@@ -106,12 +106,6 @@ const getAll = async (req, res) => {
             {
               model: MenuItem,
               as: "menuItems",
-              // include: [
-              //   {
-              //     model: Owner,
-              //     as: "owner",
-              //   },
-              // ],
             },
           ],
         },
@@ -145,12 +139,6 @@ const getSingle = async (req, res) => {
               {
                 model: MenuItem,
                 as: "menuItems",
-                // include: [
-                //   {
-                //     model: Owner,
-                //     as: "owner",
-                //   },
-                // ],
               },
             ],
           },

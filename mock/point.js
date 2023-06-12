@@ -14,6 +14,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
   {
     email: "point2@mail.com",
@@ -30,6 +31,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
   {
     email: "point3@mail.com",
@@ -46,6 +48,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
   {
     email: "point4@mail.com",
@@ -62,6 +65,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
   {
     email: "point5@mail.com",
@@ -78,6 +82,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
   {
     email: "point6@mail.com",
@@ -94,6 +99,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
   {
     email: "point7@mail.com",
@@ -110,6 +116,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
   {
     email: "point8@mail.com",
@@ -126,6 +133,7 @@ const data = [
     createdAt: "2023-03-22T10:39:52.652Z",
     token: null,
     role: "point",
+    image:"https://www.dinin.am/wp-content/uploads/2023/04/Coffee-House-Prime-Findin-Dinin-Pushkin-16.jpg"
   },
 ];
 
