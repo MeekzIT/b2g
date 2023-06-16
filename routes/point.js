@@ -6,7 +6,7 @@ const authAdminMiddleWare = require("../middlewares/authMiddleware");
 router.post("/create", authAdminMiddleWare, pointController.create);
 router.post("/delete", authAdminMiddleWare, pointController.deletePoint);
 router.post("/activity", authAdminMiddleWare, pointController.pointActivity);
-router.get("/", authAdminMiddleWare, pointController.getAll);
-router.get("/:id", authAdminMiddleWare, pointController.getSingle);
+router.get("/", pointController.getAll);
+router.get("/:id", pointController.getSingle);
 
 module.exports = router;

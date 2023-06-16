@@ -128,7 +128,7 @@ const getSingle = async (req, res) => {
     const { role } = req.user;
     const { id } = req.params;
 
-    if (role == "admin") {
+    if (role == "admin" || role == "owner") {
       const owner = await Owner.findOne({
         where: { id },
         include: [

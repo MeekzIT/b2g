@@ -42,6 +42,9 @@ module.exports = {
       rating: {
         type: Sequelize.STRING,
       },
+      activity: {
+        type: Sequelize.BOOLEAN,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

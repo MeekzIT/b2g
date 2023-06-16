@@ -16,6 +16,7 @@ const pointRouter = require("./routes/point");
 const menuRouter = require("./routes/menuItem");
 const saleRouter = require("./routes/sale");
 const feedBackRouter = require("./routes/feedBack");
+const userRouter = require("./routes/users");
 const apiDocs = require("./swagger/api-documentation.json");
 
 // view engine setup
@@ -42,6 +43,7 @@ app.use("/api/v1/points", pointRouter);
 app.use("/api/v1/menus", menuRouter);
 app.use("/api/v1/sales", saleRouter);
 app.use("/api/v1/feedbacks", feedBackRouter);
+app.use("/api/v1/users", userRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

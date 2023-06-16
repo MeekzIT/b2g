@@ -14,6 +14,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -30,6 +31,25 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
+  },
+  {
+    image:
+      "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
+    nameHy: "smuzi hy",
+    nameRu: "smuzi ru",
+    nameEn: "smuzi en",
+    descHy: "smuzii masin hy",
+    descRu: "smuzii masin ru",
+    descEn: "smuzii masin en",
+    price: "850",
+    rating: "4.5",
+    pointId: 1,
+    activity:true,
+    ownerId:1,
+    updatedAt: "2023-03-22T10:39:52.652Z",
+    createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -46,6 +66,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -62,6 +83,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -78,22 +100,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
-  },
-  {
-    image:
-      "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
-    nameHy: "smuzi hy",
-    nameRu: "smuzi ru",
-    nameEn: "smuzi en",
-    descHy: "smuzii masin hy",
-    descRu: "smuzii masin ru",
-    descEn: "smuzii masin en",
-    price: "850",
-    rating: "4.5",
-    pointId: 1,
-    ownerId:1,
-    updatedAt: "2023-03-22T10:39:52.652Z",
-    createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -110,6 +117,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -125,6 +133,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -141,6 +150,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -157,6 +167,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -173,6 +184,7 @@ const data = [
     ownerId:1,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -189,6 +201,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -205,6 +218,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -221,6 +235,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -237,6 +252,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -253,6 +269,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -269,6 +286,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   }, {
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -284,6 +302,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -300,6 +319,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -316,6 +336,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -332,6 +353,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -348,6 +370,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -364,6 +387,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -380,6 +404,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -396,6 +421,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -412,6 +438,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -428,6 +455,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   }, {
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -443,6 +471,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -458,22 +487,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
-  },
-  {
-    image:
-      "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
-    nameHy: "smuzi hy",
-    nameRu: "smuzi ru",
-    nameEn: "smuzi en",
-    descHy: "smuzii masin hy",
-    descRu: "smuzii masin ru",
-    descEn: "smuzii masin en",
-    price: "850",
-    rating: "4.5",
-    pointId: 4,
-    ownerId:2,
-    updatedAt: "2023-03-22T10:39:52.652Z",
-    createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -490,6 +504,7 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -506,6 +521,24 @@ const data = [
     ownerId:2,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
+  },
+  {
+    image:
+      "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
+    nameHy: "smuzi hy",
+    nameRu: "smuzi ru",
+    nameEn: "smuzi en",
+    descHy: "smuzii masin hy",
+    descRu: "smuzii masin ru",
+    descEn: "smuzii masin en",
+    price: "850",
+    rating: "4.5",
+    pointId: 4,
+    ownerId:2,
+    updatedAt: "2023-03-22T10:39:52.652Z",
+    createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -522,6 +555,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -538,6 +572,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -554,6 +589,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -570,6 +606,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -586,6 +623,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
   {
     image:
@@ -602,6 +640,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -617,6 +656,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -632,6 +672,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -647,6 +688,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -662,6 +704,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -677,6 +720,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -692,6 +736,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -707,6 +752,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -722,6 +768,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -737,6 +784,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -752,6 +800,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -767,6 +816,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -782,6 +832,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -797,6 +848,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -812,6 +864,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -827,6 +880,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -842,6 +896,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -857,6 +912,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -872,6 +928,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -887,6 +944,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -902,6 +960,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -917,6 +976,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -932,6 +992,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -947,6 +1008,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -962,6 +1024,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -977,6 +1040,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -992,6 +1056,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1007,6 +1072,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1022,6 +1088,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1037,6 +1104,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1052,6 +1120,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1067,6 +1136,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1082,6 +1152,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1097,6 +1168,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1112,6 +1184,7 @@ const data = [
     ownerId:3,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1127,6 +1200,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1142,6 +1216,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1157,6 +1232,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1172,6 +1248,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1187,6 +1264,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1202,6 +1280,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1217,6 +1296,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1232,6 +1312,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1247,6 +1328,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1262,6 +1344,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1277,6 +1360,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1292,6 +1376,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1307,6 +1392,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1322,6 +1408,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1337,6 +1424,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1352,6 +1440,7 @@ const data = [
     ownerId:4,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1367,6 +1456,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1382,6 +1472,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1397,6 +1488,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1412,6 +1504,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1427,6 +1520,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1442,6 +1536,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1457,6 +1552,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1472,6 +1568,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1487,6 +1584,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1502,6 +1600,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1517,6 +1616,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1532,6 +1632,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1547,6 +1648,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1562,6 +1664,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1577,6 +1680,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1592,6 +1696,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },{
     image:
       "https://img.edasla.ru/recipe/1337/3778fa3c28c91f722853d7a99547bcf5.jpg",
@@ -1607,6 +1712,7 @@ const data = [
     ownerId:5,
     updatedAt: "2023-03-22T10:39:52.652Z",
     createdAt: "2023-03-22T10:39:52.652Z",
+activity:true,
   },
 ];
 
