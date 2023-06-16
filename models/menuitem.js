@@ -46,8 +46,8 @@ module.exports = (sequelize, DataTypes) => {
     as: "owner",
   });
 
-  MenuItem.belongsTo(Sale, {
-    foreignKey: "id",
+  MenuItem.hasOne(Sale, {
+    foreignKey: "menuItemId",
     as: "sales",
   });
 

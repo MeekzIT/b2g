@@ -3,7 +3,6 @@ const MenuItem = require("../models").MenuItem;
 const Sale = require("../models").Sale;
 const FeedBack = require("../models").FeedBack;
 
-
 const create = async (req, res) => {
   try {
     const { role } = req.user;
@@ -49,34 +48,11 @@ const create = async (req, res) => {
 const edit = async (req, res) => {
   try {
     const { role } = req.user;
-    const {
-      id,
-      image,
-      nameHy,
-      nameRu,
-      nameEn,
-      descHy,
-      descRu,
-      descEn,
-      price,
-      rating,
-      pointId,
-      ownerId,
-    } = req.body;
+    const data = req.body;
 
     if (role == "admin" || role == "owner" || role == "point") {
-      let menuItem = await MenuItem.findOne({ where: { id } });
-      menuItem.image = image;
-      menuItem.nameHy = nameHy;
-      menuItem.nameRu = nameRu;
-      menuItem.nameEn = nameEn;
-      menuItem.descHy = descHy;
-      menuItem.descRu = descRu;
-      menuItem.descEn = descEn;
-      menuItem.price = price;
-      menuItem.rating = rating;
-      menuItem.pointId = pointId;
-      menuItem.ownerId = ownerId;
+      let menuItem = await MenuItem.findOne({ where: { id:data.id } });
+      await menuItem.update(data);
       await menuItem.save();
       return res.json({ succes: true });
     }
@@ -112,8 +88,9 @@ const getAll = async (req, res) => {
     const { search } = req.query;
     const offset = Number.parseInt(req.query.page) || 0;
     const limit = Number.parseInt(req.query.size) || 16;
-
+    const sort = req.query.sort;
     let queryObj = {};
+    let sortedItems = [];
     if (search) {
       let searchedItems = JSON.parse(search);
 
@@ -130,10 +107,14 @@ const getAll = async (req, res) => {
         queryObj.ownerId = { [Op.eq]: searchedItems.ownerId };
       }
     }
+     if (sort !== undefined) {
+       sortedItems.push([sort.split(",")[0], sort.split(",")[1].toUpperCase()]);
+     }
     const count = await MenuItem.findAll({
       where: {
         ...queryObj,
       },
+      order: [...sortedItems],
     });
 
     const allItems = await MenuItem.findAll({
@@ -152,6 +133,7 @@ const getAll = async (req, res) => {
           as: "feedBacks",
         },
       ],
+      order: [...sortedItems],
     });
     let totalPages = Math.ceil(count.length / limit);
     return res.json({
