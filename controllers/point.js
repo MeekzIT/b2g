@@ -147,7 +147,7 @@ const getSingle = async (req, res) => {
   try {
     const { role } = req.user;
     const { id } = req.params;
-    if (role == "admin") {
+    if (role == "admin" || role == "owner" || role == "point") {
       const point = await Point.findOne({
         where: { id },
         include: [

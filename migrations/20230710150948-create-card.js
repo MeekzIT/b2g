@@ -2,47 +2,26 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("MenuItems", {
+    await queryInterface.createTable("Cards", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      pointId: {
+      userId: {
         type: Sequelize.INTEGER,
       },
-      ownerId: {
-        type: Sequelize.INTEGER,
-      },
-      image: {
+      accountNumber: {
         type: Sequelize.STRING,
       },
-      nameHy: {
+      expiry: {
         type: Sequelize.STRING,
       },
-      nameRu: {
+      name: {
         type: Sequelize.STRING,
       },
-      nameEn: {
-        type: Sequelize.STRING,
-      },
-      descHy: {
-        type: Sequelize.STRING,
-      },
-      descRu: {
-        type: Sequelize.STRING,
-      },
-      descEn: {
-        type: Sequelize.STRING,
-      },
-      price: {
-        type: Sequelize.STRING,
-      },
-      rating: {
-        type: Sequelize.STRING,
-      },
-      activity: {
+      defaultCard: {
         type: Sequelize.BOOLEAN,
       },
       createdAt: {
@@ -56,6 +35,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("MenuItems");
+    await queryInterface.dropTable("Cards");
   },
 };

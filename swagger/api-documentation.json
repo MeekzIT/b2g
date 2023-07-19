@@ -34,6 +34,18 @@
     {
       "name": "Feedbacks",
       "description": "API functions for Feedbacks"
+    },
+    {
+      "name": "Users",
+      "description": "API functions for Users"
+    },
+    {
+      "name": "Card",
+      "description": "API functions for Card"
+    },
+    {
+      "name": "Basket",
+      "description": "API functions for Basket"
     }
   ],
   "apis": [],
@@ -305,7 +317,7 @@
               "document": {
                 "schema": {
                   "type": "string",
-                  "example": "{succes:true,,data:{...,Points:{...}}}"
+                  "example": "{succes:true,data:{...,Points:{...}}}"
                 }
               }
             }
@@ -485,7 +497,7 @@
               "document": {
                 "schema": {
                   "type": "string",
-                  "example": "{succes:true,,data:{...,MenuItems:{...}}}"
+                  "example": "{succes:true,data:{...,MenuItems:{...}}}"
                 }
               }
             }
@@ -720,7 +732,7 @@
               "document": {
                 "schema": {
                   "type": "string",
-                  "example": "{succes:true,,data:{...}"
+                  "example": "{succes:true,data:{...}"
                 }
               }
             }
@@ -946,6 +958,581 @@
                 "schema": {
                   "type": "string",
                   "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/register": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "firstName",
+            "required": true,
+            "description": "Sashik"
+          },
+          {
+            "name": "lastName",
+            "required": true,
+            "description": "Sargsyan"
+          },
+          {
+            "name": "email",
+            "required": true,
+            "description": "sashik_50@gmail.com"
+          },
+          {
+            "name": "phone",
+            "required": true,
+            "description": "099454565"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "description": "sahik1234"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": true,
+            "description": "sashik_50@gmail.com"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "description": "sahik1234"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{token:adsasdasdfadgfsgsg478548d4sf98sd4f98sd4f98sd4f}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/logout": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "Autorization",
+            "required": true,
+            "description": "Bearer ******"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/edit": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "4"
+          },
+          {
+            "name": "firstName",
+            "required": true,
+            "description": "Sashik"
+          },
+          {
+            "name": "lastName",
+            "required": true,
+            "description": "Sargsyan"
+          },
+          {
+            "name": "email",
+            "required": false,
+            "description": "sashik_50@gmail.com"
+          },
+          {
+            "name": "phone",
+            "required": false,
+            "description": "099454565"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/me": {
+      "get": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "Autorization",
+            "required": true,
+            "description": "Bearer ******"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,data:{id:***,firstName:***,lastName:***,phone:***,role:***}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/block": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "4"
+          },
+          {
+            "name": "block",
+            "required": true,
+            "description": "true || false"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "description": "3"
+          },
+          {
+            "name": "size",
+            "required": false,
+            "description": "by default 16"
+          },
+          {
+            "name": "search",
+            "required": false,
+            "description": "{phone:99999999}"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,data:{...}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/:id": {
+      "get": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "13"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,data:{...}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/get-code": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": true,
+            "description": "test@gmail.com"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,message:Verify code sent in you email}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/verify-code": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": true,
+            "description": "test@gmail.com"
+          },
+          {
+            "name": "code",
+            "required": true,
+            "description": "47612"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/new-password": {
+      "post": {
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "email",
+            "required": true,
+            "description": "test@gmail.com"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "description": "aspy9dva123134"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/card/add-card": {
+      "post": {
+        "tags": ["Card"],
+        "parameters": [
+          {
+            "name": "accountNumber",
+            "required": true,
+            "description": "4568457612345"
+          },
+          {
+            "name": "expiry",
+            "required": true,
+            "description": "04/27"
+          },
+          {
+            "name": "name",
+            "required": true,
+            "description": "GASPAR GASPARYAN"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/card/destroy-card": {
+      "post": {
+        "tags": ["Card"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cards": {
+      "get": {
+        "tags": ["Card"],
+        "parameters": [
+          {
+            "name": "Autorization",
+            "required": true,
+            "description": "Bearer ******"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true, cards: [{...}]}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "card/change-default": {
+      "post": {
+        "tags": ["Card"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "45"
+          },
+          {
+            "name": "defaultCard",
+            "required": true,
+            "description": "false | true"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "basket/add": {
+      "post": {
+        "tags": ["Basket"],
+        "parameters": [
+          {
+            "name": "menuItemId",
+            "required": true,
+            "description": "45"
+          },
+          {
+            "name": "count",
+            "required": true,
+            "description": "2"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "basket/destroy": {
+      "post": {
+        "tags": ["Basket"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "45"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "basket/edit": {
+      "post": {
+        "tags": ["Basket"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "45"
+          },
+          {
+            "name": "count",
+            "required": true,
+            "description": "3"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "basket/": {
+      "get": {
+        "tags": ["Basket"],
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "description": "45"
+          },
+          {
+            "name": "count",
+            "required": true,
+            "description": "3"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "document": {
+                "schema": {
+                  "type": "string",
+                  "example": "{succes:true,basketItems:[...]}"
                 }
               }
             }

@@ -33,6 +33,7 @@ const create = async (req, res) => {
         rating,
         pointId,
         ownerId,
+        activity:true
       });
       return res.json({ succes: true });
     }
@@ -86,7 +87,7 @@ const del = async (req, res) => {
 const getAll = async (req, res) => {
   try {
     const { search } = req.query;
-    const offset = Number.parseInt(req.query.page) || 0;
+    const offset = Number.parseInt(req.query.page)- 1 || 0;
     const limit = Number.parseInt(req.query.size) || 16;
     const sort = req.query.sort;
     let queryObj = {};
@@ -111,13 +112,14 @@ const getAll = async (req, res) => {
        sortedItems.push([sort.split(",")[0], sort.split(",")[1].toUpperCase()]);
      }
     const count = await MenuItem.findAll({
+      order: [...sortedItems],
       where: {
         ...queryObj,
       },
       order: [...sortedItems],
     });
-
     const allItems = await MenuItem.findAll({
+      order: [...sortedItems],
       where: {
         ...queryObj,
       },
@@ -137,6 +139,7 @@ const getAll = async (req, res) => {
     });
     let totalPages = Math.ceil(count.length / limit);
     return res.json({
+      offset,limit,
       data: allItems,
       totalElements: count.length,
       totalPages,

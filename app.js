@@ -16,6 +16,10 @@ const pointRouter = require("./routes/point");
 const menuRouter = require("./routes/menuItem");
 const saleRouter = require("./routes/sale");
 const feedBackRouter = require("./routes/feedBack");
+const userRouter = require("./routes/users");
+const cardRouter = require("./routes/card");
+const basketRouter = require("./routes/basket");
+const orderRouter = require("./routes/order");
 const apiDocs = require("./swagger/api-documentation.json");
 
 // view engine setup
@@ -42,10 +46,36 @@ app.use("/api/v1/points", pointRouter);
 app.use("/api/v1/menus", menuRouter);
 app.use("/api/v1/sales", saleRouter);
 app.use("/api/v1/feedbacks", feedBackRouter);
-
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/card", cardRouter);
+app.use("/api/v1/basket", basketRouter);
+app.use("/api/v1/order", orderRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
+});
+
+const io = require("socket.io")(process.env.SOCKET_PORT, {
+  cors: {
+    origin: [process.env.FRONT_URL, process.env.ADMIN_URL],
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
+});
+
+io.on("connection", (socket) => {
+  //connect
+  console.log("user is conected!");
+
+  //new order
+  socket.on("create-order", (data) => {
+    io.emit("get-new-orders", data);
+  });
+
+  //disconnect
+  socket.on("disconnect", () => {
+    console.log("a user is disconnected!");
+  });
 });
 
 // error handler

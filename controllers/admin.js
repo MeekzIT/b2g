@@ -1,5 +1,4 @@
 const Admin = require("../models").Admin;
-const Users = require("../models").User;
 const Owner = require("../models").Owner;
 const Point = require("../models").Point;
 const jwt = require("jsonwebtoken");
@@ -117,7 +116,7 @@ const changeSettings = async (req, res) => {
       return res.json({ succes: true });
     } else if (role == "point") {
       const { address, lat, lng, phone } = req.body;
-      const user = await Users.findOne({ where: { id: user_id } });
+      const user = await Point.findOne({ where: { id: user_id } });
       user.email = email;
       user.password = password;
       user.address = address;

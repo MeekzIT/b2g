@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       rating: DataTypes.STRING,
       pointId: DataTypes.INTEGER,
       ownerId: DataTypes.INTEGER,
+      activity: DataTypes.BOOLEAN,
     },
     {
       sequelize,
@@ -35,6 +36,8 @@ module.exports = (sequelize, DataTypes) => {
   let Sale = sequelize.define("Sale");
   let Owner = sequelize.define("Owner");
   let FeedBack = sequelize.define("FeedBack");
+  let Basket = sequelize.define("Basket");
+  let OrderItems = sequelize.define("OrderItems");
 
   MenuItem.belongsTo(Point, {
     foreignKey: "id",
@@ -54,6 +57,16 @@ module.exports = (sequelize, DataTypes) => {
   MenuItem.hasMany(FeedBack, {
     foreignKey: "id",
     as: "feedBacks",
+  });
+
+  MenuItem.hasOne(Basket, {
+    foreignKey: "id",
+    // as: "menuItemId",
+  });
+
+  MenuItem.belongsTo(OrderItems, {
+    foreignKey: "id",
+    as: "orderMenuItems",
   });
 
   return MenuItem;
